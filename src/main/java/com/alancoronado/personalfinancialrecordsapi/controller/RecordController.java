@@ -28,6 +28,10 @@ public class RecordController {
         return service.findAll();
     }
 
-
+    @PutMapping
+    @ResponseStatus(HttpStatus.OK)
+    public RecordDTO update(@RequestBody RecordDTO data){
+        return service.update(data);
+    }
 
 }
