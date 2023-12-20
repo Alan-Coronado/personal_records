@@ -8,6 +8,8 @@ import com.alancoronado.personalfinancialrecordsapi.repository.RecordRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class RecordService {
 
@@ -20,6 +22,10 @@ public class RecordService {
     public RecordDTO save(CreateRecordDTO data){
         Record entity = repository.save(mapper.toModel(data));
         return mapper.toDTO(entity);
+    }
+
+    public List<RecordDTO> findAll(){
+        return repository.findAll().stream().map(mapper::toDTO).toList();
     }
 
 }
