@@ -33,4 +33,8 @@ public class RecordService {
         return mapper.toDTO(entity);
     }
 
+    public void delete(Long id){
+        repository.deleteById(id);
+    }
+
 }
