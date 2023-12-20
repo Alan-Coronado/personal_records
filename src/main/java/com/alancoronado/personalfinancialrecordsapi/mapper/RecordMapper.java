@@ -16,4 +16,6 @@ public interface RecordMapper {
     @Mapping(target = "id", ignore = true)
     Record toModel(CreateRecordDTO dto);
 
+    @Mapping(target = "id")
+    Record toModel(RecordDTO dto);
 }
