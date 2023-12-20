@@ -28,4 +28,9 @@ public class RecordService {
         return repository.findAll().stream().map(mapper::toDTO).toList();
     }
 
+    public RecordDTO update(RecordDTO data){
+        Record entity = repository.save(mapper.toModel(data));
+        return mapper.toDTO(entity);
+    }
+
 }
