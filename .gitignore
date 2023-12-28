@@ -38,3 +38,6 @@ out/
 
 ### app configuration ###
 env.properties
+
+### DS Files ###
+*.DS_Store
