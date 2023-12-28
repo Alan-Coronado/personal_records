@@ -18,4 +18,7 @@ public class Record {
 
     @Column
     private BigDecimal amount;
+
+    @ManyToOne
+    private Account account;
 }
