@@ -7,4 +7,6 @@ import java.math.BigDecimal;
 @Data
 public class CreateRecordDTO {
     private BigDecimal amount;
+
+    private AccountDTO account;
 }
